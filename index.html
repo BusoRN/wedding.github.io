@@ -62,6 +62,26 @@
 								<h2 class="major">Programma</h2>
 								<span class="image main"><img src="images/torri.jpeg" alt="" /></span>
 								<p>Il programma completo sarà aggiornato a breve.</p>
+								<p> La location della nostra cerimonia sarà <a href="#" onclick="
+  var lat = 43.621664;
+  var lon = 11.147270;
+  var address = encodeURIComponent('Via Malafrasca, 66, 50026 San Casciano in Val di Pesa FI, Italia');
+
+  var ua = navigator.userAgent.toLowerCase();
+
+  if (/iphone|ipad|ipod/.test(ua)) {
+    // iOS → Apple Maps
+    window.location.href = 'http://maps.apple.com/?q=' + address + '&ll=' + lat + ',' + lon;
+  } else if (/android/.test(ua)) {
+    // Android → Google Maps
+    window.location.href = 'https://maps.google.com/?q=' + lat + ',' + lon;
+  } else {
+    // Desktop → Google Maps
+    window.location.href = 'https://maps.google.com/?q=' + lat + ',' + lon;
+  }
+
+  return false;
+"> Tenuta Il Corno </a> </p>
 							</article>
 
 						<!-- About -->
@@ -120,6 +140,7 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<p>&#127468;&#127463; <a href="index_eng.html">English version</a>.</p>
+						<!-- <p> <a href="prova_gpx.html">Prova GPX</a>.</p> -->
 					</footer>
 
 			</div>
